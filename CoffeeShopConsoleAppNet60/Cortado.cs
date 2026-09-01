@@ -8,7 +8,7 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class Cortado : Coffee, IMilk
     {
-        public Cortado(int discount) : base(discount)
+        public Cortado(int discount, string name) : base(discount, name)
         {
             if (discount > 5)
             {

@@ -8,7 +8,7 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class FlatWhite : Coffee, IMilk
     {
-        public FlatWhite(int discount) : base(discount)
+        public FlatWhite(int discount, string name) : base(discount, name)
         {
             if (discount > 5)
             {
