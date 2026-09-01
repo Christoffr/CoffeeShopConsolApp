@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public class Coffee
+    public abstract class Coffee
     {
         public virtual decimal Price()
         {
             return 20;
         }
+
+        public abstract string Strength();
+
     }
 }

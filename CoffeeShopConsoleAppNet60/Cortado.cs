@@ -12,5 +12,10 @@ namespace CoffeeShopConsoleAppNet60
         {
             return base.Price() +5;
         }
+
+        public override string Strength()
+        {
+            return "Medium";
+        }
     }
 }
