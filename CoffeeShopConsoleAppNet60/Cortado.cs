@@ -8,6 +8,14 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class Cortado : Coffee, IMilk
     {
+        public Cortado(int discount) : base(discount)
+        {
+            if (discount > 5)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+        }
+
         public int mlMilk()
         {
             return 40;
@@ -15,7 +23,7 @@ namespace CoffeeShopConsoleAppNet60
 
         public override decimal Price()
         {
-            return base.Price() +5;
+            return base.Price() +5 - base.discount;
         }
 
         public override string Strength()

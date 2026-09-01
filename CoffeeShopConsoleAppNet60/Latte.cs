@@ -8,6 +8,14 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class Latte : Coffee, IMilk
     {
+        public Latte(int discount) : base(discount)
+        {
+            //if (discount > 5)
+            //{
+            //    throw new ArgumentOutOfRangeException();
+            //}
+        }
+
         public int mlMilk()
         {
             return 400;
@@ -15,7 +23,7 @@ namespace CoffeeShopConsoleAppNet60
 
         public override decimal Price()
         {
-            return base.Price() + 20;
+            return base.Price() + 20 -base.discount;
         }
 
         public override string Strength()
