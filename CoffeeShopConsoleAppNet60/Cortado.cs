@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public class Cortado : Coffee
+    public class Cortado : Coffee, IMilk
     {
+        public int mlMilk()
+        {
+            return 40;
+        }
+
         public override decimal Price()
         {
             return base.Price() +5;
@@ -17,5 +22,7 @@ namespace CoffeeShopConsoleAppNet60
         {
             return "Medium";
         }
+
+
     }
 }
