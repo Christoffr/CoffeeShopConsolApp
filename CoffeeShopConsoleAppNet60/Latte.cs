@@ -10,10 +10,10 @@ namespace CoffeeShopConsoleAppNet60
     {
         public Latte(int discount) : base(discount)
         {
-            //if (discount > 5)
-            //{
-            //    throw new ArgumentOutOfRangeException();
-            //}
+            if (discount > 5)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
         }
 
         public int mlMilk()
