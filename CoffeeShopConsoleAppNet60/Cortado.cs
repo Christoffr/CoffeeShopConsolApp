@@ -8,13 +8,17 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class Cortado : Coffee, IMilk
     {
-        public Cortado(int discount, string name, Blend blend) : base(discount, name, blend)
+        public Cortado(int discount, string name, Blend blend, MilkType milk) : base(discount, name, blend)
         {
             if (discount > 5)
             {
                 throw new ArgumentOutOfRangeException();
             }
+
+            Milk = milk;
         }
+
+        public MilkType Milk { get; set; }
 
         public int mlMilk()
         {

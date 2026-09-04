@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
+    public enum MilkType
+    {
+        Minimælk,
+        Sødmælk,
+        Havremælk,
+        Soyamælk
+    }
     public interface IMilk
     {
         int mlMilk();
+
+        MilkType Milk { get; set; }
     }
 }

@@ -37,6 +37,11 @@ namespace CoffeeShopConsoleAppNet60
             return 20;
         }
 
+        public int Discount()
+        {
+            return discount;
+        }
+
         public abstract string Strength();
 
     }
