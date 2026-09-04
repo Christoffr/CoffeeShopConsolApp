@@ -8,7 +8,7 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class BlackCoffee : Coffee
     {
-        public BlackCoffee(int discount, string name) : base(discount, name)
+        public BlackCoffee(int discount, string name, Blend blend) : base(discount, name, blend)
         {
             if (discount > 5)
             {
